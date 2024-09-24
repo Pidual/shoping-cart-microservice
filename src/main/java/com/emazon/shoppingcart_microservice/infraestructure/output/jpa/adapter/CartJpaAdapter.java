@@ -13,9 +13,15 @@ public class CartJpaAdapter implements ICartPersistencePort {
     private final CartEntityMapper cartEntityMapper;
 
 
+    @Override
+    public Cart getCartByEmail(String email) {
+        return cartEntityMapper.toCart(cartRepository.findCartEntityByUserEmail(email));
+    }
 
     @Override
-    public Cart getCartByEmail(String mail) {
-        return null;
+    public void saveCart(Cart cart) {
+        cartRepository.save(cartEntityMapper.toCartEntity(cart));
     }
+
+
 }

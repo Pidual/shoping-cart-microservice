@@ -4,13 +4,11 @@ public class CartItem {
 
     private String articleName;
     private int quantity;
-    private double price;
 
 
     public CartItem(String articleName, int quantity, double price) {
         this.articleName = articleName;
         this.quantity = quantity;
-        this.price = price;
     }
 
     public String getArticleName() {
@@ -29,11 +27,4 @@ public class CartItem {
         this.quantity = quantity;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 }

@@ -6,6 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CartItemRequest {
-    private Long articleName; // ID of the article to be added
-    private Integer quantity; // Quantity of the article
+    private String articleName;
+    private Integer quantity;
 }

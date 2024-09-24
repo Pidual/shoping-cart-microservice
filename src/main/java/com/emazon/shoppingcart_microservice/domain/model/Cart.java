@@ -18,28 +18,28 @@ public class Cart {
         this.lastModificationDate = lastModificationDate;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public List<CartItem> getArticleList() {
-        return cartItemList;
-    }
-
-    public void setArticleList(List<CartItem> cartItemList) {
-        this.cartItemList = cartItemList;
-    }
-
     public String getClientName() {
         return clientName;
     }
 
     public void setClientName(String clientName) {
         this.clientName = clientName;
+    }
+
+    public List<CartItem> getCartItemList() {
+        return cartItemList;
+    }
+
+    public void setCartItemList(List<CartItem> cartItemList) {
+        this.cartItemList = cartItemList;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
     public Date getLastModificationDate() {
@@ -50,3 +50,4 @@ public class Cart {
         this.lastModificationDate = lastModificationDate;
     }
 }
+
