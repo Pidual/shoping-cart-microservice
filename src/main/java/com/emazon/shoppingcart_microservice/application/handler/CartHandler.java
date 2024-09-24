@@ -4,7 +4,6 @@ package com.emazon.shoppingcart_microservice.application.handler;
 import com.emazon.shoppingcart_microservice.application.dto.CartItemRequest;
 import com.emazon.shoppingcart_microservice.application.mapper.CartMapper;
 import com.emazon.shoppingcart_microservice.domain.api.ICartServicePort;
-import com.emazon.shoppingcart_microservice.domain.model.CartItem;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +17,8 @@ public class CartHandler implements ICartHandler {
 
 
     @Override
-    public void addItemToCart(CartItemRequest cartItemRequest) {
-        cartUseCase.addItemToCart(cartMapper.toCartItem(cartItemRequest));
+    public void addItemToCart(CartItemRequest cartItemRequest,String  token , String email) {
+        cartUseCase.addItemToCart(cartMapper.toCartItem(cartItemRequest),token,email);
     }
 
 }
